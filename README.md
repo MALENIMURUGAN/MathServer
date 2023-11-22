@@ -30,9 +30,6 @@ Create a HTML file to implement form based input and output.
 Publish the website in the given URL.
 
 ## PROGRAM :
-
-math.html
-
 <html>
 <head>
 <meta charset='utf-8'>
@@ -112,7 +109,7 @@ def prismarea(request):
         print('request=',request)
         print('base edge=',a)
         print('height=',h)
-        area = 2*int(a)*int(a) + 4*int(a)*int(h)
+        area = 2*(int a)*(int a) + 4*(int a)*(int h)
         context['area'] = area
         context['a'] = a
         context['h'] = h
@@ -123,12 +120,13 @@ urls.py
 
 from django.contrib import admin
 from django.urls import path
-from mathapp import views
+from myapp import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('areaofasquareprism/',views.prismarea,name="areaofasquareprism"),
     path('',views.prismarea,name="areaofasquareprismroot")
 ]
+
 ## SERVER SIDE PROCESSING:
 ![Alt text](mathserver.png)
 
