@@ -30,16 +30,18 @@ Create a HTML file to implement form based input and output.
 Publish the website in the given URL.
 
 ## PROGRAM :
+math.html
+
 <html>
 <head>
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-<title>Area of a Square Prism</title>
+<title>Area of Square Prism</title>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
 <style type="text/css">
 body 
 {
-background-color:pink;
+background-color:olive;
 }
 .edge {
 width: 1440px;
@@ -54,10 +56,10 @@ border: Thick dashed lime;
 width: 500px;
 min-height: 300px;
 font-size: 20px;
-background-color:blue;
+background-color:cyan;
 }
 .formelt{
-color:cyan;
+color:orange;
 text-align: center;
 margin-top: 7px;
 margin-bottom: 6px;
@@ -80,7 +82,7 @@ padding-top: 20px;
 Base edge : <input type="text" name="base edge" value="{{a}}"></input>(in m)<br/>
 </div>
 <div class="formelt">
-Hieght: <input type="text" name="height" value="{{h}}"></input>(in m)<br/>
+Height : <input type="text" name="height" value="{{h}}"></input>(in m)<br/>
 </div>
 <div class="formelt">
 <input type="submit" value="Calculate"></input><br/>
@@ -107,9 +109,9 @@ def prismarea(request):
         a = request.POST.get('base edge','0')
         h = request.POST.get('height','0')
         print('request=',request)
-        print('base edge=',a)
-        print('height=',h)
-        area = 2*(int a)*(int a) + 4*(int a)*(int h)
+        print('Base edge=',a)
+        print('Height=',h)
+        area = 2*int(a)int(a) + 4*int(a) int(h)
         context['area'] = area
         context['a'] = a
         context['h'] = h
@@ -120,12 +122,13 @@ urls.py
 
 from django.contrib import admin
 from django.urls import path
-from myapp import views
+from mathapp import views
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('areaofasquareprism/',views.prismarea,name="areaofasquareprism"),
-    path('',views.prismarea,name="areaofasquareprismroot")
+    path('areaofsquareprism/',views.prismarea,name="areaofsquareprism"),
+    path('',views.prismarea,name="areaofsquareprism")
 ]
+
 
 ## SERVER SIDE PROCESSING:
 ![Alt text](mathserver.png)
