@@ -42,7 +42,7 @@ math.html
 <style type="text/css">
 body 
 {
-background-color:olive;
+background-color:pink;
 }
 .edge {
 width: 1440px;
@@ -53,14 +53,14 @@ padding-left: 300px;
 }
 .box {
 display:block;
-border: Thick dashed lime;
+border: Thick dashed cyan;
 width: 500px;
 min-height: 300px;
 font-size: 20px;
-background-color:cyan;
+background-color:purple;
 }
 .formelt{
-color:orange;
+color:grey;
 text-align: center;
 margin-top: 7px;
 margin-bottom: 6px;
@@ -133,11 +133,11 @@ urlpatterns = [
 
 ```
 ## SERVER SIDE PROCESSING:
-![Alt text](mathserver.png)
+![Alt text](sq2.png)
 
 ## HOMEPAGE:
-![Alt text](prism.png)
 
+![Alt text](sq.png)
 
 
 ## RESULT:
