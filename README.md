@@ -112,7 +112,7 @@ def prismarea(request):
         print('request=',request)
         print('Base edge=',a)
         print('Height=',h)
-        area = 2*int(a)int(a) + 4*int(a) int(h)
+        area = 2*int(a)*int(a) + 4*int(a)*int(h)
         context['area'] = area
         context['a'] = a
         context['h'] = h
